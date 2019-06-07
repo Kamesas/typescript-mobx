@@ -4,9 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import {Provider} from 'mobx-react';
+import {autorun, configure} from 'mobx';
+import {appState} from './store'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+configure({enforceActions: "always"});
+
+const Root = () => (
+  <Provider {...appState}>
+    <App/>
+  </Provider>
+);
+
+autorun(()=>{
+  ReactDOM.render(<Root />, document.getElementById('root'));
+});
+
 serviceWorker.unregister();
