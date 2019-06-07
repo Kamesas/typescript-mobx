@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="221cfde5-934c-4d1f-8600-2d2870f76275" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app_for_tests/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/.idea/live_chat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/LiveChat/ChatList/ChatList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/LiveChat/ChatList/ChatList.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/LiveChat/Confirm/Confirm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/LiveChat/Confirm/Confirm.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/LiveChat/ContactForm/ContactForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/LiveChat/ContactForm/ContactForm.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/LiveChat/LiveChat.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/LiveChat/LiveChat.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dump_live_chat/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/.idea/live_chat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/LiveChat/ChatList/ChatList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/LiveChat/ChatList/ChatList.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/LiveChat/Confirm/Confirm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/LiveChat/Confirm/Confirm.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/LiveChat/ContactForm/ContactForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/LiveChat/ContactForm/ContactForm.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/LiveChat/LiveChat.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/LiveChat/LiveChat.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../live_chat/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/.idea/mwj_local.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/Jenkinsfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/jesthtmlreporter.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/local.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/public/assets/spinner.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/public/css/loading.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/public/js/disableReactDevTools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/public/js/utagconfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/App.test.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/AppContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/ConfigureStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/PropTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/Api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/CommonStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/Constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/ModalUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/ReusableDucks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/UserStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/Utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/forms/Masks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/forms/Normalizations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/forms/Validations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/history.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/common/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/addToCartModalConfirmation/AddToCartModalConfirmation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/addToCartModalConfirmation/AddToCartModalConfirmation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/alertsBanner/MvjAlertsBanner.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/alertsBanner/MvjAlertsBanner.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/alertsBanner/MvjAlertsBannerContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/calendar/CalendarDay/CalendarDay.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/calendar/CalendarDay/CalendarDay.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/calendar/CalendarDay/CalendarDayContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/calendar/CalendarList/CalendarList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/calendar/CalendarList/CalendarList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/calendar/CalendarList/CalendarListContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/calendar/CalendarSelect/WithSelect.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/calendar/CalendarSelect/WithSelect.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/cardListWithModal/CardListWithModal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/checkboxList/CheckboxList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/checkboxList/CheckboxList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/checkoutForms/paymentMethod/PaymentMethod.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/checkoutForms/paymentMethod/PaymentMethod.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/checkoutForms/paymentMethod/PaymentMethodContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/confirmationInfo/ConfirmationInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/confirmationInfo/ConfirmationInfo.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/content/WithContent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/footer/FooterContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/footer/MvjFooter.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forgotPassword/ForgotPasswordForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forgotPassword/ForgotPasswordForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forgotPassword/ForgotPasswordFormContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/formInputs/radioGroup/RadioGroup.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/achForm/ACHForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/achForm/ACHForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/address/Address.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/airPreferences/AirPreferencesForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/airPreferences/AirPreferencesForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/bankNumber/BankNumber.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/bankNumber/BankNumber.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/creditCard/CreditCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/creditCard/CreditCard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/fieldWrapper/FieldWrapper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/fieldWrapper/FieldWrapper.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/tokenex/TokenEx.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/tokenex/TokenEx.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/forms/tokenex/TokenExContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/guestForms/guestInfo/GuestInfoForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/guestForms/guestInfo/GuestInfoForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/guestForms/guestInfo/GuestInfoFormContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/guestForms/guestInfo/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/guestSelector/GuestSelector.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/guestSelector/GuestSelector.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/header/HeaderContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/header/MvjHeader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/header/MvjHeader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/loadMore/WithLoadMore.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/loadMore/WithLoadMore.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/loadMore/WithLoadMoreContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/login/LoginForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/login/LoginForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/login/LoginFormContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/loginAlert/LoginAlert.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/loginAlert/LoginAlert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/loginAlert/LoginAlertContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/modalReservationForm/ModalReservationForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/modalReservationForm/ModalReservationForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/modalReservationForm/ModalReservationFormContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/pageHeader/MvjPageHeader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/paymentsCart/paymentConfirmation/PaymentConfirmation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/paymentsCart/paymentConfirmation/PaymentConfirmation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/paymentsCart/paymentConfirmation/PaymentConfirmationContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/paymentsCart/vouchersCredits/VouchersCredits.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/paymentsCart/vouchersCredits/VouchersCredits.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/paymentsCart/vouchersCredits/VouchersCreditsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/preAuthInterstitial/PreAuthInterstitial.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/preAuthInterstitial/PreAuthInterstitial.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/preAuthInterstitial/PreAuthInterstitialContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/preAuthWrapper/PreAuthWrapper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/preAuthWrapper/PreAuthWrapper.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/questionMarkTooltip/QuestionMarkTooltip.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/questionMarkTooltip/QuestionMarkTooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/reinitializeForm/WithReinitializeForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/reinitializeForm/WithReinitializeFormContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/reservationGuestWidget/ReservationGuestWidget.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/reservationGuestWidget/ReservationGuestWidget.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/routeSwitch/RouteSwitch.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/routeSwitch/defaultRouteSetter/DefaultRouteSetter.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/routeSwitch/defaultRouteSetter/DefaultRouteSetterContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/seatingPreference/SeatingPreference.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/seatingPreference/SeatingPreference.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/shorexModalContent/ShorexModalMainContent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/shorexModalContent/ShorexModalMainContent.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/shorexModalSideContent/ShorexModalSideContent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/shorexModalSideContent/ShorexModalSideContent.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/shorexModalSideContent/ShorexModalSideContentContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/signup/SignUpForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/signup/SignUpForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/signup/SignUpFormContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/timeList/TimeList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/components/timeList/TimeList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/assets/Background_loginFPO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/assets/spinner.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/Garamond/agaramondpro-regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/Garamond/agaramondpro-semibold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-BoldIt.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-BoldIt.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-BoldIt.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-BoldIt.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Italic.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Italic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Rg.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Rg.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Rg.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/fonts/NeueFrutigerWorld/NeueFrutigerWorldW05-Rg.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/css/images/help.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/Modals.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/MvjModal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/MvjModalContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/cardDetails/CardDetails.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/cardDetails/CardDetails.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/comparison/Comparison.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/comparison/Comparison.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/picture/Picture.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/picture/Picture.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/reservation/Reservation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/reservation/Reservation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/reservation/ReservationDefaultMainContent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/stateroom/Stateroom.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/modals/stateroom/Stateroom.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/account/Account.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/account/Account.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/account/AccountContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/account/AccountStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/account/profile/UserProfile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/account/profile/UserProfile.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/account/profile/UserProfileContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/air/Air.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/air/Air.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/air/AirContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/air/AirStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/air/airBooking/AirBooking.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/air/airBooking/AirBookingContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/air/preferences/AirPreferences.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/air/preferences/AirPreferences.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/air/preferences/AirPreferencesContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/beforeYouGo/BeforeYouGo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/beforeYouGo/BeforeYouGo.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/beforeYouGo/BeforeYouGoContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/beforeYouGo/BeforeYouGoStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/beforeYouGo/enhanceYourJourney/EnhanceYourJourney.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/beforeYouGo/enhanceYourJourney/EnhanceYourJourneyContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/beforeYouGo/planning/Planning.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/beforeYouGo/planning/PlanningContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/calendar/Calendar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/calendar/CalendarContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/calendar/CalendarStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/Documents.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/Documents.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/DocumentsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/DocumentsStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/guestInfo/GuestInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/guestInfo/GuestInfo.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/guestInfo/GuestInfoContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/passportsVisas/PassportsVisas.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/passportsVisas/PassportsVisasContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/travelContract/TravelContract.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/documents/travelContract/TravelContractContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/extensions/Extensions.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/extensions/Extensions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/extensions/ExtensionsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/extensions/ExtensionsStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/help/Help.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/help/Help.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/help/HelpContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/home/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/home/Home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/home/HomeContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/home/HomeStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/Onboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/Onboard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/OnboardContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/OnboardStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/diningBeverage/DiningBeverage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/diningBeverage/DiningBeverage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/diningBeverage/DiningBeverageContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/enrichment/Enrichment.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/enrichment/EnrichmentContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/foodAlergies/FoodAllergies.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/foodAlergies/FoodAllergies.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/foodAlergies/FoodAllergiesContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/preferences/Preferences.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/preferences/PreferencesContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/preferences/stateroomPreferences/StateroomPreferences.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/preferences/stateroomPreferences/StateroomPreferences.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/preferences/stateroomPreferences/StateroomPreferencesContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/shipAndCrew/ShipAndCrew.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/shipAndCrew/ShipAndCrewContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/spa/Spa.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/spa/SpaContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/specialOccasions/SpecialOccasions.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/specialOccasions/SpecialOccasions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/onboard/specialOccasions/SpecialOccasionsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/Payments.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/PaymentsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/PaymentsStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/TokenEx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/cruisePayments/CruisePayments.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/cruisePayments/CruisePayments.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/cruisePayments/CruisePaymentsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentAddons/PaymentAddons.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentAddons/PaymentAddonsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentAmount/PaymentAmount.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentAmount/PaymentAmount.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentAmount/PaymentAmountContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentCheckout/PaymentCheckout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentCheckout/PaymentCheckout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentCheckout/PaymentCheckoutContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentMethods/PaymentMethods.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentMethods/PaymentMethods.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentMethods/PaymentMethodsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentMethods/addCreditCard/AddCreditCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentMethods/addCreditCard/AddCreditCard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/payments/paymentMethods/addCreditCard/AddCreditCardContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/shorex/Shorex.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/shorex/Shorex.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/shorex/ShorexContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/shorex/ShorexStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/signOut/SignOut.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/travelBooking/BookingDetail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/travelBooking/TravelBooking.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/travelBooking/TravelBooking.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/travelBooking/TravelBookingContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/pages/travelBooking/TravelBookingStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/stack/build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/stack/config/develop.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/stack/config/qa.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/stack/config/release.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/stack/deploy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/stack/template.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mwj_local/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-fancy-component/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-fancy-component/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-fancy-component/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-fancy-component/webpack.config.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="726" />
+    <option name="width" value="1194" />
+    <option name="height" value="1052" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="typescript-mobx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript-mobx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript-mobx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript-mobx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="221cfde5-934c-4d1f-8600-2d2870f76275" name="Default Changelist" comment="" />
+      <created>1559907998145</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559907998145</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1052" extended-state="6" />
+    <layout>
+      <window_info id="npm" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986821" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>
