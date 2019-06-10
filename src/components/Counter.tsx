@@ -6,7 +6,7 @@ interface UsersProps {
   counter?: CounterStore;
 }
 
-const Counter: React.FC<UsersProps> = (props: UsersProps) => {
+const Counter = (props: UsersProps) => {
 
   if (!props.counter) {
     return null;
