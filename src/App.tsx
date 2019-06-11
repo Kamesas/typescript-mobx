@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Users from "./components/Users";
-import Counter from "./components/Counter";
+//import Users from "./components/Users";
+//import Counter from "./components/Counter";
 import ToDo from "./components/ToDo/ToDo";
 
 const App: React.FC = () => {

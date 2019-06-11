@@ -4,15 +4,15 @@ import iTask from "../../interfaces/Task";
 interface toDoItemProps {
   taskItem: iTask,
   deleteNote: Function,
-  updateTask: Function
+  selectUpdatingTask: Function
 }
 
 const ToDoItem = (props: toDoItemProps) => {
   return (
-    <li>
+    <li className='ToDoItem'>
       {props.taskItem.task}
       <button onClick={() => props.deleteNote(props.taskItem.id)}>Del</button>
-      <button onClick={() => props.updateTask(props.taskItem)}>Update</button>
+      <button onClick={() => props.selectUpdatingTask(props.taskItem)}>Update</button>
     </li>
   );
 };

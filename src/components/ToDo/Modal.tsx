@@ -8,9 +8,7 @@ interface ModalInterface {
 }
 
 const Modal = (props: ModalInterface) => {
-
   return (
-
     <div className="modal-wrapper"
          style={{
            transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
@@ -27,7 +25,6 @@ const Modal = (props: ModalInterface) => {
         <button className="btn-cancel" onClick={() => props.close()}>CLOSE</button>
       </div>
     </div>
-
   );
 };
 

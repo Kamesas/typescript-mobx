@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import iTask from "../../interfaces/Task";
 
 interface AddForm {
   addTask: Function,
@@ -15,7 +16,7 @@ const AddForm = (props: AddForm) => {
   const makeNewTask = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const newTask: { id: string; task: string } = {
+    const newTask: iTask = {
       id: new Date().toString(),
       task: newItemTask
     };

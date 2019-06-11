@@ -2,14 +2,13 @@ import React, {useState} from 'react';
 import iTask from "../../interfaces/Task";
 
 interface UpdateFormInterface {
-  todoList?: {id: string | number, task: string},
-  task: iTask;
-  updateTask: (task: iTask) => any;
+  updatingTask: iTask,
+  updateTask: Function
 }
 
 const UpdateForm = (props: UpdateFormInterface) => {
 
-  const [ItemTaskValue, setNewItemTask] = useState(props.task.task);
+  const [ItemTaskValue, setNewItemTask] = useState(props.updatingTask.task);
 
   const handlerInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewItemTask(e.target.value.trim().toString())
@@ -19,15 +18,11 @@ const UpdateForm = (props: UpdateFormInterface) => {
     e.preventDefault();
 
     const newTask: iTask = {
-      id: props.task.id,
+      id: props.updatingTask.id,
       task: ItemTaskValue
     };
 
     props.updateTask(newTask);
-
-    if (ItemTaskValue !== '') {
-      setNewItemTask('');
-    }
 
   };
 
