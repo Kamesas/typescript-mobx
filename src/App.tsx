@@ -8,9 +8,9 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <ToDo/>
-      <hr/>
+     {/* <hr/>
       <Users />
-      <Counter />
+      <Counter />*/}
 
     </div>
   );
