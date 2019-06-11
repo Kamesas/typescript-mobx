@@ -1,15 +1,19 @@
 import React, {useState} from 'react';
 
-const ToDo = () => {
+interface AddForm {
+  addTask: Function,
+}
 
-  const [todoList, setTaskList] = useState<{id: string, task: string}[]>([]);
+const AddForm = (props: AddForm) => {
+
   const [newItemTask, setNewItemTask] = useState('');
 
   const handlerInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewItemTask(e.target.value.trim().toString())
   };
 
-  const addTask = () => {
+  const makeNewTask = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
     const newTask: { id: string; task: string } = {
       id: new Date().toString(),
@@ -17,23 +21,20 @@ const ToDo = () => {
     };
 
     if (newItemTask !== '') {
-      setTaskList([newTask, ...todoList]);
+      props.addTask(newTask);
       setNewItemTask('');
     }
 
   };
 
   return (
-    <div>
+
+    <form onSubmit={makeNewTask}>
       <input type="text" value={newItemTask} onChange={handlerInputChange}/>
-      <button onClick={addTask}>Add</button>
+      <button>Add new task</button>
+    </form>
 
-      {todoList && todoList.map(item => {
-        return <li key={item.id} >{item.task}</li>
-      })}
-
-    </div>
   );
 };
 
-export default ToDo;
+export default AddForm;
