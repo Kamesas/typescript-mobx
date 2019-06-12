@@ -25,7 +25,9 @@ const ToDo = () => {
     }
 
     return todoList.filter(item => {
-      return item.task.toLocaleLowerCase().includes(value.toLocaleLowerCase());
+      return item.task
+        .toLocaleLowerCase()
+        .includes(value.trim().toLocaleLowerCase());
     });
   }
 

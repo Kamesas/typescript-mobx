@@ -1,16 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import iTask from "../../interfaces/Task";
 
 interface AddForm {
-  addTask: Function,
+  addTask: Function;
 }
 
 const AddForm = (props: AddForm) => {
-
-  const [newItemTask, setNewItemTask] = useState('');
+  const [newItemTask, setNewItemTask] = useState("");
 
   const handlerInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNewItemTask(e.target.value.trim().toString())
+    setNewItemTask(e.target.value.toString());
   };
 
   const makeNewTask = (e: React.FormEvent<HTMLFormElement>) => {
@@ -21,20 +20,17 @@ const AddForm = (props: AddForm) => {
       task: newItemTask
     };
 
-    if (newItemTask !== '') {
+    if (newItemTask !== "") {
       props.addTask(newTask);
-      setNewItemTask('');
+      setNewItemTask("");
     }
-
   };
 
   return (
-
     <form onSubmit={makeNewTask}>
-      <input type="text" value={newItemTask} onChange={handlerInputChange}/>
+      <input type="text" value={newItemTask} onChange={handlerInputChange} />
       <button>Add new task</button>
     </form>
-
   );
 };
 
