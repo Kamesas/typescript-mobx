@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 import ToDoItem from "./ToDoItem";
 import AddForm from "./AddForm";
 import Modal from "./Modal";
@@ -10,38 +10,27 @@ const existingLocal = localStorage.getItem("tasks");
 const getFromLocalTasks = (existingLocal && JSON.parse(existingLocal)) || [];
 
 const ToDo = () => {
-
-  const [todoList, setTaskList] = useState<iTask []>(getFromLocalTasks);
+  const [todoList, setTaskList] = useState<iTask[]>(getFromLocalTasks);
   const [isShowingModal, setShowingModal] = useState(false);
   const [updatingTask, setUpdatingTask] = useState<iTask>();
+  const [inputValue, setFilterValue] = useState<string>("");
 
-  const searchHandle = (value: string) => {
-    console.log(value);
-
+  const filterValue = (value: string) => {
+    setFilterValue(value);
   };
 
-  //  displayClients(findedTask) {
-  //   const serchValue = finded.toLowerCase();
-  //
-  //   if (finded.length === 0) {
-  //     return clients;
-  //   }
-  //
-  //   return _.filter(clients, el => {
-  //     if (el !== null) {
-  //       const { firstName, lastName } = el.props.client.general;
-  //       const all =
-  //         firstName +
-  //         lastName;
-  //
-  //       //return all.toLowerCase().indexOf(serchValue) > -1;
-  //       return all.toLowerCase().includes(serchValue);
-  //     }
-  //   });
-  // }
+  function searchHandle(value: string) {
+    if (value === "") {
+      return todoList;
+    }
+
+    return todoList.filter(item => {
+      return item.task.toLocaleLowerCase().includes(value.toLocaleLowerCase());
+    });
+  }
 
   const toggleModalHandler = () => {
-    setShowingModal(!isShowingModal)
+    setShowingModal(!isShowingModal);
   };
 
   const addTask = (newTask: iTask) => {
@@ -49,7 +38,7 @@ const ToDo = () => {
   };
 
   const deleteNote = (idTask: string | number) => {
-    setTaskList(todoList.filter(task => task.id !== idTask))
+    setTaskList(todoList.filter(task => task.id !== idTask));
   };
 
   const selectUpdatingTask = (task: iTask) => {
@@ -60,12 +49,14 @@ const ToDo = () => {
   const updateTask = (newTask: iTask) => {
     toggleModalHandler();
 
-    setTaskList(todoList.map((item) => {
-      if (item.id === newTask.id) {
-        item.task = newTask.task;
-      }
-      return item;
-    }))
+    setTaskList(
+      todoList.map(item => {
+        if (item.id === newTask.id) {
+          item.task = newTask.task;
+        }
+        return item;
+      })
+    );
   };
 
   useEffect(() => {
@@ -73,27 +64,27 @@ const ToDo = () => {
   });
 
   return (
-    <div className='ToDoApp'>
-      <AddForm addTask={addTask}/>
-      <Search searchHandle={searchHandle}/>
+    <div className="ToDoApp">
+      <AddForm addTask={addTask} />
+      <Search searchHandle={filterValue} />
 
-      <ul className='ToDoApp__list'>
-        {Array.isArray(todoList) && todoList.map((item) => (
-          <ToDoItem
-            key={item.id}
-            deleteNote={deleteNote}
-            selectUpdatingTask={selectUpdatingTask}
-            taskItem={item}/>
-        ))}
+      <ul className="ToDoApp__list">
+        {Array.isArray(searchHandle(inputValue)) &&
+          searchHandle(inputValue).map(item => (
+            <ToDoItem
+              key={item.id}
+              deleteNote={deleteNote}
+              selectUpdatingTask={selectUpdatingTask}
+              taskItem={item}
+            />
+          ))}
       </ul>
 
-      {isShowingModal && updatingTask ?
+      {isShowingModal && updatingTask ? (
         <Modal close={toggleModalHandler} show={isShowingModal}>
-          <UpdateForm updateTask={updateTask} updatingTask={updatingTask}/>
+          <UpdateForm updateTask={updateTask} updatingTask={updatingTask} />
         </Modal>
-        : null
-      }
-
+      ) : null}
     </div>
   );
 };
