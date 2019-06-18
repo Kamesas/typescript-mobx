@@ -4,14 +4,14 @@ import AddForm from "./AddForm";
 import Search from "./Search";
 
 interface IHeader {
-  addTask: Function,
+  addBook: Function,
   filterValue: Function
 }
 
 const Header = (props: IHeader ) => {
   return (
     <div className='Header'>
-      <AddForm addTask={props.addTask}/>
+      <AddForm addBook={props.addBook}/>
       <Search searchHandle={props.filterValue}/>
     </div>
   );

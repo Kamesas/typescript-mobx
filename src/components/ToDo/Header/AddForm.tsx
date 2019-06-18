@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import iBook from "../../../interfaces/Book";
+import {AppContextConsumer} from '../../contextAPI';
+
 
 interface AddForm {
-  addTask: Function;
+  addBook: Function;
 }
 
 const AddForm = (props: AddForm) => {
@@ -13,27 +15,33 @@ const AddForm = (props: AddForm) => {
     setNewBook({...newBook, [name]: value.toString()});
   };
 
-  const makeNewTask = (e: React.FormEvent<HTMLFormElement>) => {
+  const makeNewBook = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const newTask: iBook = {
+    const newObjBook: iBook = {
       id: new Date().toString(),
       bookName: newBook.name,
       bookAuthor: newBook.author
     };
 
     if (newBook.name !== "" || newBook.author !== "") {
-      props.addTask(newTask);
+      props.addBook(newObjBook);
       setNewBook({...newBook, name: '', author: ''});
     }
   };
-
+ console.log(props);
   return (
-    <form onSubmit={makeNewTask}>
-      <input type="text" name='name' value={newBook.name} onChange={handlerInputChange} />
-      <input type="text" name='author' value={newBook.author} onChange={handlerInputChange} />
-      <button>Add new books</button>
-    </form>
+    <AppContextConsumer>
+      {add => add && (
+        <form onSubmit={makeNewBook}>
+          <input type="text" name='name' value={newBook.name} onChange={handlerInputChange}/>
+          <input type="text" name='author' value={newBook.author} onChange={handlerInputChange}/>
+          <button>Add new books</button>
+          {console.log(add)}
+        </form>
+      )}
+    </AppContextConsumer>
+
   );
 };
 

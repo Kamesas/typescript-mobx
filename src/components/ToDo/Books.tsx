@@ -5,6 +5,7 @@ import Modal from "./Modal";
 import UpdateForm from "./UpdateForm";
 import iBooks from "../../interfaces/Book";
 import Header from "./Header/Header";
+import {AppContextProvider} from '../contextAPI'
 
 const existingLocal = localStorage.getItem("tasks");
 const getFromLocalTasks = (existingLocal && JSON.parse(existingLocal)) || [];
@@ -37,8 +38,8 @@ const Books = () => {
     setShowingModal(!isShowingModal);
   };
 
-  const addTask = (newTask: iBooks) => {
-    setTaskList([newTask, ...todoList]);
+  const addBook = (newBook: iBooks) => {
+    setTaskList([newBook, ...todoList]);
   };
 
   const deleteNote = (idTask: string | number) => {
@@ -70,7 +71,10 @@ const Books = () => {
   return (
     <div className="ToDoApp">
       <h1>Bookshelf</h1>
-      <Header addTask={addTask} filterValue={filterValue} />
+
+      <AppContextProvider value={ {add: addBook} }>
+        <Header addBook={addBook} filterValue={filterValue}/>
+      </AppContextProvider>
 
       <div className="ToDoTable">
         {Array.isArray(searchHandle(inputValue)) &&
@@ -85,15 +89,15 @@ const Books = () => {
         ))}
       </div>
 
-  {
-    isShowingModal && updatingTask ? (
-      <Modal close={toggleModalHandler} show={isShowingModal}>
-        <UpdateForm updateTask={updateTask} updatingTask={updatingTask}/>
-      </Modal>
-    ) : null
-  }
-</div>
-);
+      {
+        isShowingModal && updatingTask ? (
+          <Modal close={toggleModalHandler} show={isShowingModal}>
+            <UpdateForm updateTask={updateTask} updatingTask={updatingTask}/>
+          </Modal>
+        ) : null
+      }
+    </div>
+  );
 };
 
 export default Books;
