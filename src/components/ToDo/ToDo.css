@@ -1,0 +1,7 @@
+.ToDoApp {
+    padding: 1em;
+}
+
+.ToDoTable {
+    display: flex;
+}

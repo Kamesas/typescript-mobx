@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import ToDoItem from "./ToDoItem";
-import AddForm from "./AddForm";
+import React, {useState, useEffect} from "react";
+import './ToDo.scss';
+import Book from "./Body/Book";
 import Modal from "./Modal";
 import UpdateForm from "./UpdateForm";
-import iTask from "../../interfaces/Task";
-import Search from "./Search";
+import iBooks from "../../interfaces/Book";
+import Header from "./Header/Header";
 
 const existingLocal = localStorage.getItem("tasks");
 const getFromLocalTasks = (existingLocal && JSON.parse(existingLocal)) || [];
 
-const ToDo = () => {
-  const [todoList, setTaskList] = useState<iTask[]>(getFromLocalTasks);
+const Books = () => {
+  const [todoList, setTaskList] = useState<iBooks[]>(getFromLocalTasks);
   const [isShowingModal, setShowingModal] = useState(false);
-  const [updatingTask, setUpdatingTask] = useState<iTask>();
+  const [updatingTask, setUpdatingTask] = useState<iBooks>();
   const [inputValue, setFilterValue] = useState<string>("");
 
   const filterValue = (value: string) => {
@@ -25,7 +25,9 @@ const ToDo = () => {
     }
 
     return todoList.filter(item => {
-      return item.task
+      const allValues = item.bookAuthor + ' ' + item.bookName;
+
+      return allValues
         .toLocaleLowerCase()
         .includes(value.trim().toLocaleLowerCase());
     });
@@ -35,7 +37,7 @@ const ToDo = () => {
     setShowingModal(!isShowingModal);
   };
 
-  const addTask = (newTask: iTask) => {
+  const addTask = (newTask: iBooks) => {
     setTaskList([newTask, ...todoList]);
   };
 
@@ -43,18 +45,18 @@ const ToDo = () => {
     setTaskList(todoList.filter(task => task.id !== idTask));
   };
 
-  const selectUpdatingTask = (task: iTask) => {
+  const selectUpdatingTask = (task: iBooks) => {
     toggleModalHandler();
     setUpdatingTask(task);
   };
 
-  const updateTask = (newTask: iTask) => {
+  const updateTask = (newTask: iBooks) => {
     toggleModalHandler();
 
     setTaskList(
       todoList.map(item => {
         if (item.id === newTask.id) {
-          item.task = newTask.task;
+          item = newTask;
         }
         return item;
       })
@@ -67,28 +69,31 @@ const ToDo = () => {
 
   return (
     <div className="ToDoApp">
-      <AddForm addTask={addTask} />
-      <Search searchHandle={filterValue} />
+      <h1>Bookshelf</h1>
+      <Header addTask={addTask} filterValue={filterValue} />
 
-      <ul className="ToDoApp__list">
+      <div className="ToDoTable">
         {Array.isArray(searchHandle(inputValue)) &&
-          searchHandle(inputValue).map(item => (
-            <ToDoItem
-              key={item.id}
-              deleteNote={deleteNote}
-              selectUpdatingTask={selectUpdatingTask}
-              taskItem={item}
-            />
-          ))}
-      </ul>
+        searchHandle(inputValue).map((item, i) => (
+          <Book
+            key={item.id}
+            index={i + 1}
+            deleteNote={deleteNote}
+            selectUpdatingTask={selectUpdatingTask}
+            bookItem={item}
+          />
+        ))}
+      </div>
 
-      {isShowingModal && updatingTask ? (
-        <Modal close={toggleModalHandler} show={isShowingModal}>
-          <UpdateForm updateTask={updateTask} updatingTask={updatingTask} />
-        </Modal>
-      ) : null}
-    </div>
-  );
+  {
+    isShowingModal && updatingTask ? (
+      <Modal close={toggleModalHandler} show={isShowingModal}>
+        <UpdateForm updateTask={updateTask} updatingTask={updatingTask}/>
+      </Modal>
+    ) : null
+  }
+</div>
+);
 };
 
-export default ToDo;
+export default Books;

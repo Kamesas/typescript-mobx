@@ -1,0 +1,66 @@
+$tableBorderColor: #356235;
+
+.ToDoApp {
+  padding: 1em;
+}
+
+.ToDoTable {
+  margin-top: 20px;
+
+  .ToDoItem {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    border: 1px solid $tableBorderColor;
+
+    + .ToDoItem {
+      border-top: 0;
+    }
+
+    &-cell {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      padding: 5px;
+
+      &--number {
+        flex: 0 0 60px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      &--task {
+        flex: 1 1 100%;
+      }
+
+      &--actions {
+        flex: 0 0 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &--task,
+      &--actions {
+        border-left: 1px solid $tableBorderColor;
+      }
+    }
+
+    &-btn {
+      background-color: orange;
+      color: #000;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 1px 1px 17px 1px rgba(0, 0, 0, .4);
+      border: none;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: all .3s ease;
+
+      &:hover {
+        box-shadow: 1px 1px 110px 1px rgba(0, 0, 0, .1);
+      }
+    }
+  }
+}

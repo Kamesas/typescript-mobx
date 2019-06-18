@@ -1,35 +1,38 @@
 import React, {useState} from 'react';
-import iTask from "../../interfaces/Task";
+import iBook from "../../interfaces/Book";
 
 interface UpdateFormInterface {
-  updatingTask: iTask,
-  updateTask: Function
+  updatingTask: iBook,
+  updateTask(newTask: iBook): any
 }
 
 const UpdateForm = (props: UpdateFormInterface) => {
 
-  const [ItemTaskValue, setNewItemTask] = useState(props.updatingTask.task);
+  const [newBook, setNewBook] = useState({name: props.updatingTask.bookName, author: props.updatingTask.bookAuthor});
 
   const handlerInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNewItemTask(e.target.value.trim().toString())
+    const {name, value} = e.target;
+    setNewBook({...newBook, [name]: value.toString()});
   };
 
   const updateExistedTask = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const newTask: iTask = {
+    const updateBook: iBook = {
       id: props.updatingTask.id,
-      task: ItemTaskValue
+      bookName: newBook.name,
+      bookAuthor: newBook.author
     };
 
-    props.updateTask(newTask);
+    props.updateTask(updateBook);
 
   };
 
   return (
     <form onSubmit={updateExistedTask}>
-      <input type="text" value={ItemTaskValue} onChange={handlerInputChange}/>
-      <button>Update</button>
+      <input type="text" name='name' value={newBook.name} onChange={handlerInputChange} />
+      <input type="text" name='author' value={newBook.author} onChange={handlerInputChange} />
+      <button type={"submit"}>Update</button>
     </form>
   );
 };

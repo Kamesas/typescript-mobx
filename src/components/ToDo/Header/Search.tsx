@@ -5,7 +5,7 @@ interface InterfaceSearch {
 }
 
 const Search = (props: InterfaceSearch) => {
-  const getInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const getInputValue = (e: React.ChangeEvent<HTMLInputElement>) => { //ChangeEvent<HTMLInputElement>
     props.searchHandle(e.target.value);
   };
 
@@ -13,7 +13,7 @@ const Search = (props: InterfaceSearch) => {
     <input
       type="text"
       onChange={getInputValue}
-      placeholder="enter task name..."
+      placeholder="enter book name..."
     />
   );
 };
