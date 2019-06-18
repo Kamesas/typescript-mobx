@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import iBook from "../../../interfaces/Book";
-import {AppContextConsumer} from '../../contextAPI';
+import {AppContextConsumer, AppContextInterface} from '../../contextAPI';
 
 
 interface AddForm {
@@ -15,8 +15,9 @@ const AddForm = (props: AddForm) => {
     setNewBook({...newBook, [name]: value.toString()});
   };
 
-  const makeNewBook = (e: React.FormEvent<HTMLFormElement>) => {
+  const makeNewBook = (e: React.FormEvent<HTMLFormElement>, func: any) => {
     e.preventDefault();
+    e.stopPropagation();
 
     const newObjBook: iBook = {
       id: new Date().toString(),
@@ -25,20 +26,20 @@ const AddForm = (props: AddForm) => {
     };
 
     if (newBook.name !== "" || newBook.author !== "") {
-      props.addBook(newObjBook);
+      func.add(newObjBook);
       setNewBook({...newBook, name: '', author: ''});
     }
   };
- console.log(props);
+
   return (
     <AppContextConsumer>
       {add => add && (
-        <form onSubmit={makeNewBook}>
+        <form onSubmit={(e) =>{makeNewBook(e, add)}}>
           <input type="text" name='name' value={newBook.name} onChange={handlerInputChange}/>
           <input type="text" name='author' value={newBook.author} onChange={handlerInputChange}/>
           <button>Add new books</button>
-          {console.log(add)}
         </form>
+
       )}
     </AppContextConsumer>
 

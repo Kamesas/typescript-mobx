@@ -1,28 +1,46 @@
-import React from 'react';
+import React, {useState, Fragment} from 'react';
 import './Book.css'
 import iBooks from "../../../interfaces/Book";
+import Modal from "../Modal";
+import BookFullInfo from "./BookFullInfo";
 
-interface toDoItemProps {
+interface ItemProps {
   bookItem: iBooks,
   deleteNote(id: string | number): any,
   selectUpdatingTask(task: iBooks): any,
   index: number
 }
 
-const Book = (props: toDoItemProps) => {
+const Book = (props: ItemProps) => {
+
+  const [isShowingModal, setShowingModal] = useState(false);
+
+   const toggleModalHandler = () => {
+    setShowingModal(!isShowingModal);
+  };
+
   return (
-    <div className='ToDoItem'>
-      <span className="ToDoItem-cell ToDoItem-cell--number">{props.index}</span>
-      <span className="ToDoItem-cell ToDoItem-cell--task">
+    <Fragment>
+      <div className='ToDoItem'>
+        <span className="ToDoItem-cell ToDoItem-cell--number">{props.index}</span>
+        <span className="ToDoItem-cell ToDoItem-cell--task" onClick={toggleModalHandler}>
         {props.bookItem.bookName}
-        <br />
-        {props.bookItem.bookAuthor}
-      </span>
-      <span className="ToDoItem-cell ToDoItem-cell--actions">
-        <button className="ToDoItem-btn" onClick={() => props.deleteNote(props.bookItem.id)}>Del</button>
-        <button className="ToDoItem-btn" onClick={() => props.selectUpdatingTask(props.bookItem)}>Update</button>
-      </span>
-    </div>
+          <br/>
+          {props.bookItem.bookAuthor}
+        </span>
+          <span className="ToDoItem-cell ToDoItem-cell--actions">
+          <button className="ToDoItem-btn" onClick={() => props.deleteNote(props.bookItem.id)}>Del</button>
+          <button className="ToDoItem-btn" onClick={() => props.selectUpdatingTask(props.bookItem)}>Update</button>
+        </span>
+      </div>
+
+      {isShowingModal &&
+        <Modal close={toggleModalHandler} show={isShowingModal}>
+          <BookFullInfo bookInfo={props.bookItem} />
+        </Modal>
+      }
+
+    </Fragment>
   );
 };
 
