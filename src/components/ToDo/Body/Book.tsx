@@ -35,7 +35,7 @@ const Book = (props: ItemProps) => {
       </div>
 
       {isShowingModal &&
-        <Modal close={toggleModalHandler} show={isShowingModal}>
+        <Modal close={toggleModalHandler} width={100} show={isShowingModal}>
           <BookFullInfo bookInfo={props.bookItem} />
         </Modal>
       }

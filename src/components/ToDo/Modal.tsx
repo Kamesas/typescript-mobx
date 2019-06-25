@@ -16,7 +16,7 @@ const Modal = (props: ModalInterface) => {
            style={{
              transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
              opacity: props.show ? 1 : 0,
-             width: props.width && props.width,
+             width: props.width && props.width + '%',
            }}>
         <div className="modal-header">
           <h3>Modal Header</h3>
