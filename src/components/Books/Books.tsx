@@ -45,9 +45,9 @@ const Books = (props: IBooksStore) => {
   };
 
   const addBook = (newBook: iBook) => {
-    setTaskList([newBook, ...todoList]);
+    //setTaskList([newBook, ...todoList]);
     console.log(newBook);
-    // props.booksStore && props.booksStore.addNewBook(newBook);
+    props.booksStore && props.booksStore.addNewBook(newBook);
   };
 
   const deleteNote = (idTask: string | number) => {
@@ -77,7 +77,7 @@ const Books = (props: IBooksStore) => {
   props.booksStore && props.booksStore.getBooksFromLocalStorage("tasks");
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(todoList));
+    //localStorage.setItem("tasks", JSON.stringify(todoList));
   });
 
   console.log(props.booksStore && props.booksStore.books);
