@@ -13,11 +13,11 @@ interface IBooksStore {
   booksStore?: BooksStore;
 }
 
-const existingLocal = localStorage.getItem("tasks");
-const getFromLocalTasks = (existingLocal && JSON.parse(existingLocal)) || [];
+// const existingLocal = localStorage.getItem("tasks");
+// const getFromLocalTasks = (existingLocal && JSON.parse(existingLocal)) || [];
 
 const Books = (props: IBooksStore) => {
-  const [todoList, setTaskList] = useState<iBook[]>(getFromLocalTasks);
+  //const [todoList, setTaskList] = useState<iBook[]>(getFromLocalTasks);
   const [isShowingModal, setShowingModal] = useState(false);
   const [updatingTask, setUpdatingTask] = useState<iBook>();
   const [inputValue, setFilterValue] = useState<string>("");
@@ -26,19 +26,19 @@ const Books = (props: IBooksStore) => {
     setFilterValue(value);
   };
 
-  function searchHandle(value: string) {
-    if (value === "") {
-      return todoList;
-    }
+  // function searchHandle(value: string) {
+  //   if (value === "") {
+  //     return todoList;
+  //   }
 
-    return todoList.filter(item => {
-      const allValues = item.bookAuthor + " " + item.bookName;
+  //   return todoList.filter(item => {
+  //     const allValues = item.bookAuthor + " " + item.bookName;
 
-      return allValues
-        .toLocaleLowerCase()
-        .includes(value.trim().toLocaleLowerCase());
-    });
-  }
+  //     return allValues
+  //       .toLocaleLowerCase()
+  //       .includes(value.trim().toLocaleLowerCase());
+  //   });
+  // }
 
   const toggleModalHandler = () => {
     setShowingModal(!isShowingModal);
@@ -53,7 +53,7 @@ const Books = (props: IBooksStore) => {
   const deleteNote = (idTask: string | number) => {
     //setTaskList(todoList.filter(task => task.id !== idTask));
     console.log(idTask);
-    //props.booksStore && props.booksStore.removeBook(idTask);
+    props.booksStore && props.booksStore.removeBook(idTask);
   };
 
   const selectUpdatingTask = (task: iBook) => {
@@ -64,18 +64,16 @@ const Books = (props: IBooksStore) => {
   const updateTask = (newTask: iBook) => {
     toggleModalHandler();
 
-    setTaskList(
-      todoList.map(item => {
-        if (item.id === newTask.id) {
-          item = newTask;
-        }
-        return item;
-      })
-    );
+    // setTaskList(
+    //   todoList.map(item => {
+    //     if (item.id === newTask.id) {
+    //       item = newTask;
+    //     }
+    //     return item;
+    //   })
+    // );
   };
-
-  props.booksStore && props.booksStore.getBooksFromLocalStorage("tasks");
-
+  //props.booksStore && props.booksStore.getBooksFromLocalStorage();
   useEffect(() => {
     //localStorage.setItem("tasks", JSON.stringify(todoList));
   });
@@ -105,10 +103,10 @@ const Books = (props: IBooksStore) => {
 
       <div>
         {props.booksStore &&
-          props.booksStore.books.map((item: iBook) => {
+          props.booksStore.books.map((item: iBook, i: number) => {
             return (
-              <li key={item.bookName}>
-                {item.bookName}{" "}
+              <li key={i}>
+                {item.bookName}
                 <button onClick={() => deleteNote(item.id)}>DEL</button>
               </li>
             );
