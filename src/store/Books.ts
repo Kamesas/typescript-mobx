@@ -7,29 +7,30 @@ import {
   runInAction
 } from "mobx";
 import IBook from "../interfaces/iBooks";
+import iBook from "../interfaces/iBooks";
 
 export class BooksStore {
   books: IBook[] = window.localStorage.getItem("books")
     ? JSON.parse(window.localStorage.getItem("books") || "")
     : [];
 
-  // getBooksFromLocalStorage() {
-  //   this.books = window.localStorage.getItem("books")
-  //     ? JSON.parse(window.localStorage.getItem("books") || "")
-  //     : [];
-  // }
-
   addNewBook(newBook: IBook) {
-    console.log("neeeew", newBook);
-
     this.books = [newBook, ...this.books];
-    //this.books.push(newBook);
     window.localStorage.setItem("books", JSON.stringify(this.books));
   }
 
   removeBook(idBook: string | number) {
     this.books = this.books.filter((book: IBook) => book.id !== idBook);
     window.localStorage.setItem("books", JSON.stringify(this.books));
+  }
+
+  updateBook(updatedBook: iBook) {
+    this.books = this.books.map(book => {
+      if (book.id === updatedBook.id) {
+        book = updatedBook;
+      }
+      return book;
+    });
   }
 
   // get SumCount() {
@@ -39,9 +40,9 @@ export class BooksStore {
 
 decorate(BooksStore, {
   books: observable,
-  //getBooksFromLocalStorage: action.bound,
   addNewBook: action.bound,
-  removeBook: action.bound
+  removeBook: action.bound,
+  updateBook: action.bound
   // decVal: action.bound,
   // SumCount: computed,
 });

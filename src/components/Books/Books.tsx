@@ -13,11 +13,7 @@ interface IBooksStore {
   booksStore?: BooksStore;
 }
 
-// const existingLocal = localStorage.getItem("tasks");
-// const getFromLocalTasks = (existingLocal && JSON.parse(existingLocal)) || [];
-
 const Books = (props: IBooksStore) => {
-  //const [todoList, setTaskList] = useState<iBook[]>(getFromLocalTasks);
   const [isShowingModal, setShowingModal] = useState(false);
   const [updatingTask, setUpdatingTask] = useState<iBook>();
   const [inputValue, setFilterValue] = useState<string>("");
@@ -26,33 +22,32 @@ const Books = (props: IBooksStore) => {
     setFilterValue(value);
   };
 
-  // function searchHandle(value: string) {
-  //   if (value === "") {
-  //     return todoList;
-  //   }
+  function searchHandle(value: string) {
+    if (value === "") {
+      return props.booksStore && props.booksStore.books;
+    }
 
-  //   return todoList.filter(item => {
-  //     const allValues = item.bookAuthor + " " + item.bookName;
+    return (
+      props.booksStore &&
+      props.booksStore.books.filter(item => {
+        const allValues = item.bookAuthor + " " + item.bookName;
 
-  //     return allValues
-  //       .toLocaleLowerCase()
-  //       .includes(value.trim().toLocaleLowerCase());
-  //   });
-  // }
+        return allValues
+          .toLocaleLowerCase()
+          .includes(value.trim().toLocaleLowerCase());
+      })
+    );
+  }
 
   const toggleModalHandler = () => {
     setShowingModal(!isShowingModal);
   };
 
   const addBook = (newBook: iBook) => {
-    //setTaskList([newBook, ...todoList]);
-    console.log(newBook);
     props.booksStore && props.booksStore.addNewBook(newBook);
   };
 
   const deleteNote = (idTask: string | number) => {
-    //setTaskList(todoList.filter(task => task.id !== idTask));
-    console.log(idTask);
     props.booksStore && props.booksStore.removeBook(idTask);
   };
 
@@ -61,24 +56,10 @@ const Books = (props: IBooksStore) => {
     setUpdatingTask(task);
   };
 
-  const updateTask = (newTask: iBook) => {
+  const updateTask = (updatedBook: iBook) => {
     toggleModalHandler();
-
-    // setTaskList(
-    //   todoList.map(item => {
-    //     if (item.id === newTask.id) {
-    //       item = newTask;
-    //     }
-    //     return item;
-    //   })
-    // );
+    props.booksStore && props.booksStore.updateBook(updatedBook);
   };
-  //props.booksStore && props.booksStore.getBooksFromLocalStorage();
-  useEffect(() => {
-    //localStorage.setItem("tasks", JSON.stringify(todoList));
-  });
-
-  console.log(props.booksStore && props.booksStore.books);
 
   return (
     <div className="ToDoApp">
@@ -88,9 +69,9 @@ const Books = (props: IBooksStore) => {
         <Header addBook={addBook} filterValue={filterValue} />
       </AppContextProvider>
 
-      {/* <div className="ToDoTable">
-        {Array.isArray(searchHandle(inputValue)) &&
-          searchHandle(inputValue).map((item, i) => (
+      <div className="ToDoTable">
+        {props.booksStore &&
+          props.booksStore.books.map((item, i) => (
             <Book
               key={item.id}
               index={i + 1}
@@ -99,18 +80,6 @@ const Books = (props: IBooksStore) => {
               bookItem={item}
             />
           ))}
-      </div> */}
-
-      <div>
-        {props.booksStore &&
-          props.booksStore.books.map((item: iBook, i: number) => {
-            return (
-              <li key={i}>
-                {item.bookName}
-                <button onClick={() => deleteNote(item.id)}>DEL</button>
-              </li>
-            );
-          })}
       </div>
 
       {isShowingModal && updatingTask ? (
