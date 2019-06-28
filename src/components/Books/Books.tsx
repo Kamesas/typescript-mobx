@@ -17,24 +17,25 @@ const Books = (props: IBooksStore) => {
   };
 
   function searchHandle(value: string) {
-    if (value === "") {
-      return props.booksStore && props.booksStore.books;
-    }
+    if (props.booksStore) {
+      if (value === "") {
+        return props.booksStore.books;
+      }
 
-    return (
-      props.booksStore &&
-      props.booksStore.books.filter(item => {
+      return props.booksStore.books.filter(item => {
         const allValues = item.bookAuthor + " " + item.bookName;
 
         return allValues
           .toLocaleLowerCase()
           .includes(value.trim().toLocaleLowerCase());
-      })
-    );
+      });
+    }
   }
 
   const finded =
     Array.isArray(searchHandle(inputValue)) && searchHandle(inputValue);
+
+  const books = props.booksStore && props.booksStore.books;
 
   return (
     <div className="ToDoApp">
@@ -42,9 +43,8 @@ const Books = (props: IBooksStore) => {
       <Header filterValue={filterValue} />
 
       <div className="ToDoTable">
-        {props.booksStore &&
-          props.booksStore.books &&
-          props.booksStore.books.map((item, i) => (
+        {books &&
+          books.map((item, i) => (
             <Book key={item.id} index={i + 1} bookItem={item} />
           ))}
       </div>

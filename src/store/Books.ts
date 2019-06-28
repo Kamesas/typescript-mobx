@@ -31,7 +31,6 @@ export class BooksStore {
   }
 
   updateBook(updatedBook: iBook) {
-    console.log("mobX", updatedBook);
     this.books = this.books.map(book => {
       if (book.id === updatedBook.id) {
         book = updatedBook;
@@ -40,11 +39,26 @@ export class BooksStore {
     });
   }
 
-  // findBook(searchValue: string) {
-  //   if (searchValue === "") {
-  //     return this.books;
-  //   }
-  // }
+  findBook(searchValue: string) {
+    console.log(searchValue);
+    if (searchValue === "") {
+      return (this.books =
+        window.localStorage.getItem("books") &&
+        JSON.parse(window.localStorage.getItem("books") || ""));
+    }
+
+    this.books =
+      window.localStorage.getItem("books") &&
+      JSON.parse(window.localStorage.getItem("books") || "");
+
+    return (this.books = this.books.filter(item => {
+      const allValues = item.bookAuthor + " " + item.bookName;
+
+      return allValues
+        .toLocaleLowerCase()
+        .includes(searchValue.trim().toLocaleLowerCase());
+    }));
+  }
 
   // get SumCount() {
   //   return this.value + this.value2;
@@ -55,8 +69,8 @@ decorate(BooksStore, {
   books: observable,
   addNewBook: action.bound,
   removeBook: action.bound,
-  updateBook: action.bound
-  //findBook: action.bound
+  updateBook: action.bound,
+  findBook: action.bound
   //SumCount: computed,
 });
 
