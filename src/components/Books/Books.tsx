@@ -10,7 +10,6 @@ interface IBooksStore {
 }
 
 const Books = (props: IBooksStore) => {
-  const [isShowingModal, setShowingModal] = useState(false);
   const [inputValue, setFilterValue] = useState<string>("");
 
   const filterValue = (value: string) => {
@@ -34,6 +33,9 @@ const Books = (props: IBooksStore) => {
     );
   }
 
+  const finded =
+    Array.isArray(searchHandle(inputValue)) && searchHandle(inputValue);
+
   return (
     <div className="ToDoApp">
       <h1>Bookshelf</h1>
@@ -47,7 +49,12 @@ const Books = (props: IBooksStore) => {
           ))}
       </div>
 
-      {/* <div>{props.booksStore && props.booksStore.findBook("")}</div> */}
+      <div className="ToDoTable">
+        {finded &&
+          finded.map((item, i) => {
+            return <Book key={item.id} index={i + 1} bookItem={item} />;
+          })}
+      </div>
     </div>
   );
 };

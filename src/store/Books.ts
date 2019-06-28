@@ -57,7 +57,7 @@ decorate(BooksStore, {
   removeBook: action.bound,
   updateBook: action.bound
   //findBook: action.bound
-  // SumCount: computed,
+  //SumCount: computed,
 });
 
 export default new BooksStore();
