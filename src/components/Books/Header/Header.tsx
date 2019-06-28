@@ -3,15 +3,11 @@ import "./Header.css";
 import AddForm from "./AddForm";
 import Search from "./Search";
 
-interface IHeader {
-  filterValue: Function;
-}
-
-const Header = (props: IHeader) => {
+const Header = () => {
   return (
     <div className="Header">
       <AddForm />
-      <Search searchHandle={props.filterValue} />
+      <Search />
     </div>
   );
 };

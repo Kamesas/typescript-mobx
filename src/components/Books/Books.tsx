@@ -10,50 +10,18 @@ interface IBooksStore {
 }
 
 const Books = (props: IBooksStore) => {
-  const [inputValue, setFilterValue] = useState<string>("");
-
-  const filterValue = (value: string) => {
-    setFilterValue(value);
-  };
-
-  function searchHandle(value: string) {
-    if (props.booksStore) {
-      if (value === "") {
-        return props.booksStore.books;
-      }
-
-      return props.booksStore.books.filter(item => {
-        const allValues = item.bookAuthor + " " + item.bookName;
-
-        return allValues
-          .toLocaleLowerCase()
-          .includes(value.trim().toLocaleLowerCase());
-      });
-    }
-  }
-
-  const finded =
-    Array.isArray(searchHandle(inputValue)) && searchHandle(inputValue);
-
   const books = props.booksStore && props.booksStore.books;
 
   return (
     <div className="ToDoApp">
       <h1>Bookshelf</h1>
-      <Header filterValue={filterValue} />
+      <Header />
 
       <div className="ToDoTable">
         {books &&
           books.map((item, i) => (
             <Book key={item.id} index={i + 1} bookItem={item} />
           ))}
-      </div>
-
-      <div className="ToDoTable">
-        {finded &&
-          finded.map((item, i) => {
-            return <Book key={item.id} index={i + 1} bookItem={item} />;
-          })}
       </div>
     </div>
   );

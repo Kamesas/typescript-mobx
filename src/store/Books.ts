@@ -19,7 +19,6 @@ export class BooksStore {
       this.books = [newBook];
     } else {
       this.books = [newBook, ...this.books];
-      console.log("else", this.books);
     }
 
     window.localStorage.setItem("books", JSON.stringify(this.books));
@@ -40,16 +39,15 @@ export class BooksStore {
   }
 
   findBook(searchValue: string) {
-    console.log(searchValue);
-    if (searchValue === "") {
-      return (this.books =
-        window.localStorage.getItem("books") &&
-        JSON.parse(window.localStorage.getItem("books") || ""));
-    }
-
-    this.books =
+    const localStorage =
       window.localStorage.getItem("books") &&
       JSON.parse(window.localStorage.getItem("books") || "");
+
+    if (searchValue === "") {
+      return (this.books = localStorage);
+    }
+
+    this.books = localStorage;
 
     return (this.books = this.books.filter(item => {
       const allValues = item.bookAuthor + " " + item.bookName;
