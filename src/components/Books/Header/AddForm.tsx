@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import iBook from "../../../interfaces/Book";
-import { AppContextConsumer, AppContextInterface } from "../../contextAPI";
+import { inject, observer } from "mobx-react";
+import { BooksStore } from "../../../store/Books";
 
-interface AddForm {
-  addBook: Function;
+interface IBooksStore {
+  booksStore?: BooksStore;
 }
 
-const AddForm = (props: AddForm) => {
+const AddForm = (props: IBooksStore) => {
   const [newBook, setNewBook] = useState({ name: "", author: "" });
 
   const handlerInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,7 +15,7 @@ const AddForm = (props: AddForm) => {
     setNewBook({ ...newBook, [name]: value.toString() });
   };
 
-  const makeNewBook = (e: React.FormEvent<HTMLFormElement>, func: any) => {
+  const makeNewBook = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     e.stopPropagation();
 
@@ -24,39 +25,30 @@ const AddForm = (props: AddForm) => {
       bookAuthor: newBook.author
     };
 
+    props.booksStore && props.booksStore.addNewBook(newObjBook);
+
     if (newBook.name !== "" || newBook.author !== "") {
-      func.add(newObjBook);
       setNewBook({ ...newBook, name: "", author: "" });
     }
   };
 
   return (
-    <AppContextConsumer>
-      {add =>
-        add && (
-          <form
-            onSubmit={e => {
-              makeNewBook(e, add);
-            }}
-          >
-            <input
-              type="text"
-              name="name"
-              value={newBook.name}
-              onChange={handlerInputChange}
-            />
-            <input
-              type="text"
-              name="author"
-              value={newBook.author}
-              onChange={handlerInputChange}
-            />
-            <button>Add new books</button>
-          </form>
-        )
-      }
-    </AppContextConsumer>
+    <form onSubmit={makeNewBook}>
+      <input
+        type="text"
+        name="name"
+        value={newBook.name}
+        onChange={handlerInputChange}
+      />
+      <input
+        type="text"
+        name="author"
+        value={newBook.author}
+        onChange={handlerInputChange}
+      />
+      <button>Add new books</button>
+    </form>
   );
 };
 
-export default AddForm;
+export default inject("booksStore")(observer(AddForm));

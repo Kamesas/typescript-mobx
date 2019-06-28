@@ -42,12 +42,12 @@
       <change afterPath="$PROJECT_DIR$/../live_chat/src/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../live_chat/src/logo.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../live_chat/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ToDo/Body/BookFullInfo.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToDo/Body/Book.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDo/Body/Book.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToDo/Body/BookFullInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDo/Body/BookFullInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToDo/Modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDo/Modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToDo/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDo/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Books/Books.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/Books.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Books/Header/AddForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/Header/AddForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Books/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Books.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Books.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,47 +60,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ToDo/Books.tsx">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ToDo/Body/Book.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ToDo/Body/BookFullInfo.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="320">
+              <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/ToDo/Body/BookFullInfo.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -162,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/components/ToDo/Body/ToDoItem.tsx" />
         <option value="$PROJECT_DIR$/src/components/ToDo/ToDo.scss" />
         <option value="$PROJECT_DIR$/src/components/ToDo/Header/Search.tsx" />
-        <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/interfaces/Book.tsx" />
         <option value="$PROJECT_DIR$/src/components/ToDo/UpdateForm.tsx" />
         <option value="$PROJECT_DIR$/src/components/ToDo/Header/Header.tsx" />
@@ -176,6 +142,7 @@
         <option value="$PROJECT_DIR$/src/components/ToDo/Modal.css" />
         <option value="$PROJECT_DIR$/src/components/ToDo/Body/BookFullInfo.tsx" />
         <option value="$PROJECT_DIR$/src/components/ToDo/Body/BookFullInfo.scss" />
+        <option value="$PROJECT_DIR$/src/App.tsx" />
       </list>
     </option>
   </component>
@@ -192,6 +159,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,34 +178,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="typescript-mobx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typescript-mobx" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ToDo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typescript-mobx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typescript-mobx" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ToDo" type="462c0819:PsiDirectoryNode" />
-              <item name="Body" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typescript-mobx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typescript-mobx" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ToDo" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,7 +243,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4122807" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.41118422" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -421,16 +365,6 @@
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/interfaces/Book.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -547,6 +481,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

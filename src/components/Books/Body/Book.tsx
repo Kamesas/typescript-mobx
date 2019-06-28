@@ -3,19 +3,26 @@ import "./Book.css";
 import iBooks from "../../../interfaces/Book";
 import Modal from "../Modal";
 import BookFullInfo from "./BookFullInfo";
+import { inject, observer } from "mobx-react";
+import { BooksStore } from "../../../store/Books";
+import UpdateForm from "../UpdateForm";
 
-interface ItemProps {
+interface IBooksStore {
+  booksStore?: BooksStore;
   bookItem: iBooks;
-  deleteNote(id: string | number): any;
-  selectUpdatingTask(task: iBooks): any;
   index: number;
 }
 
-const Book = (props: ItemProps) => {
+const Book = (props: IBooksStore) => {
   const [isShowingModal, setShowingModal] = useState(false);
+  const [isShowingModalUpdate, setShowingModalUpdate] = useState(false);
 
   const toggleModalHandler = () => {
     setShowingModal(!isShowingModal);
+  };
+
+  const toggleModalUpdateHandler = () => {
+    setShowingModalUpdate(!isShowingModalUpdate);
   };
 
   return (
@@ -35,15 +42,15 @@ const Book = (props: ItemProps) => {
         <span className="ToDoItem-cell ToDoItem-cell--actions">
           <button
             className="ToDoItem-btn"
-            onClick={() => props.deleteNote(props.bookItem.id)}
+            onClick={() =>
+              props.booksStore && props.booksStore.removeBook(props.bookItem.id)
+            }
           >
             Del
           </button>
-          <button
-            className="ToDoItem-btn"
-            onClick={() => props.selectUpdatingTask(props.bookItem)}
-          >
-            Update
+
+          <button className="ToDoItem-btn" onClick={toggleModalUpdateHandler}>
+            Update from MobX
           </button>
         </span>
       </div>
@@ -53,8 +60,18 @@ const Book = (props: ItemProps) => {
           <BookFullInfo bookInfo={props.bookItem} />
         </Modal>
       )}
+
+      {isShowingModalUpdate && (
+        <Modal
+          close={toggleModalUpdateHandler}
+          width={100}
+          show={isShowingModalUpdate}
+        >
+          <UpdateForm updatingTask={props.bookItem} />
+        </Modal>
+      )}
     </Fragment>
   );
 };
 
-export default Book;
+export default inject("booksStore")(observer(Book));
