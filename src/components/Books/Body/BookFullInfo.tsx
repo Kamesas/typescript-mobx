@@ -1,52 +1,45 @@
 import React, { useEffect } from "react";
 import iBooks from "../../../interfaces/Book";
 import "./BookFullInfo.scss";
+import car from "../../../assests/01-hennessey-2019-velociraptor-600-min.jpg";
 
 interface iBookInfo {
   bookInfo: iBooks;
 }
 
 const BookFullInfo = (props: iBookInfo) => {
+  const mainRef: any = React.createRef();
   const divRef: any = React.createRef();
   const headingRef: any = React.createRef();
 
   useEffect(() => {
-    divRef.current.addEventListener("mousemove", function(e: any) {
+    mainRef.current.addEventListener("mousemove", function(e: any) {
       const offsetY = e.offsetY;
-      const halfHigth = divRef.current.clientHeight / 2;
       const offsetX = e.offsetX;
-      const halfWidth = divRef.current.clientWidth / 2;
 
-      divRef.current.style = `transform: rotateX(${(offsetY - halfHigth) /
-        5}deg) rotateY(${-(offsetX - halfWidth) / 5}deg)`;
+      // image
+      const halfHigth = mainRef.current.clientHeight / 2;
+      const halfWidth = mainRef.current.clientWidth / 2;
+      const rotateX = offsetY - halfHigth;
+      const rotateY = offsetX - halfWidth;
+
+      divRef.current.style = `transform: rotateX(${rotateX /
+        20}deg) rotateY(${-rotateY / 20}deg)`;
+
+      // heading
+      headingRef.current.style = `transform: rotateX(${rotateX /
+        30}deg) rotateY(${-rotateY / 30}deg)`;
     });
-
-    // headingRef.current.addEventListener("mousemove", function(e: any) {
-    //   const offsetY = e.offsetY;
-    //   const halfHigth = divRef.current.clientHeight / 2;
-    //   const offsetX = e.offsetX;
-    //   const halfWidth = divRef.current.clientWidth / 2;
-
-    //   headingRef.current.style = `transform: rotateX(${(offsetY - halfHigth) /
-    //     5}deg) rotateY(${-(offsetX - halfWidth) / 5}deg)`;
-    // });
   });
 
   return (
-    <div className="BookFullInfo">
-      <div className="BookImg">
-        <h1 className="BookHeading" ref={headingRef}>
-          Heading
-        </h1>
-        <img
-          ref={divRef}
-          className="BookImg-img"
-          src="https://english-e-reader.net/covers/The_Judges_House-Bram_Stoker.jpg"
-          alt="alt"
-        />
+    <div className="BookFullInfo" ref={mainRef}>
+      <div className="BookHeading">
+        <h1 ref={headingRef}>Heading</h1>
       </div>
-
-      {/* <h2>{props.bookInfo.bookAuthor}</h2> */}
+      <div className="BookImg">
+        <img ref={divRef} className="BookImg-img" src={car} alt="alt" />
+      </div>
     </div>
   );
 };

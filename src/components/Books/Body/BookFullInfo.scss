@@ -1,31 +1,41 @@
 .BookFullInfo {
   display: flex;
   justify-content: center;
-}
-
-.BookHeading {
-  position: absolute;
-  color: #fff;
-  z-index: 99999999;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
+  position: relative;
 }
 
 .BookImg {
   perspective: 1000px;
   transform-style: preserve-3d;
-  position: relative;
-  border: 1px solid #000;
+  margin: 20px;
 
   &-img {
     border: 2px solid #ddd;
     margin: 10px;
     padding: 10px;
     transition: transform 0.2s ease;
+    max-width: 80%;
     &:hover {
       //transform: rotateX(45deg);
       cursor: pointer;
     }
+  }
+}
+
+.BookHeading {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: absolute;
+  color: #fff;
+  z-index: 999;
+  top: 20%;
+
+  h1 {
+    transition: transform 0.2s ease;
+    font-size: 50px;
+    //border: 1px solid #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 2px 3px #000;
   }
 }
