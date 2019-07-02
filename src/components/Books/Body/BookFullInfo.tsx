@@ -27,24 +27,26 @@ const BookFullInfo = (props: iBookInfo) => {
     const rotateY = offsetX - halfWidth;
 
     // image
+
     divRef.current.style = `transform: rotateX(${rotateX /
-      20}deg) rotateY(${-rotateY / 20}deg)`;
+      30}deg) rotateY(${-rotateY / 30}deg);`;
 
     // heading
     headingRef.current.style = `transform: rotateX(${rotateX /
-      27}deg) rotateY(${-rotateY / 27}deg)`;
+      25}deg) rotateY(${-rotateY / 25}deg); text-shadow: ${rotateY /
+      33}px ${rotateX / 33}px 3px #3e3c3c;`;
   }
 
   function rotatingDefault() {
-    divRef.current.style = "transform: rotate(0deg)";
-    headingRef.current.style = "transform: rotate(0deg)";
+    divRef.current.style = "transform: rotate(0deg); transition: all 1s ease;";
+    headingRef.current.style = "transform: rotate(0deg); ";
   }
 
   return (
     <div className="RotationBlock">
       <div className="BookFullInfo" ref={mainRef}>
         <div className="BookHeading">
-          <h1 ref={headingRef}>Heading</h1>
+          <h1 ref={headingRef}>Ford 4 x 4</h1>
         </div>
         <div className="BookImg">
           <img ref={divRef} className="BookImg-img" src={car} alt="alt" />
