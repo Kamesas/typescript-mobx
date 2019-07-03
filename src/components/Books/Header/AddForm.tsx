@@ -22,7 +22,8 @@ const AddForm = (props: IBooksStore) => {
     const newObjBook: iBook = {
       id: Date.now(),
       bookName: newBook.name,
-      bookAuthor: newBook.author
+      bookAuthor: newBook.author,
+      readedBook: false
     };
 
     props.booksStore && props.booksStore.addNewBook(newObjBook);

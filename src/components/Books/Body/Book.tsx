@@ -16,6 +16,12 @@ interface IBooksStore {
 const Book = (props: IBooksStore) => {
   const [isShowingModal, setShowingModal] = useState(false);
   const [isShowingModalUpdate, setShowingModalUpdate] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handlerCheckedChange = (): void => {
+    setIsChecked(!isChecked);
+    //props.booksStore && props.booksStore.readedBook(id)
+  };
 
   const toggleModalHandler = () => {
     setShowingModal(!isShowingModal);
@@ -33,6 +39,9 @@ const Book = (props: IBooksStore) => {
         </span>
         <span
           className="ToDoItem-cell ToDoItem-cell--task"
+          style={
+            props.bookItem.readedBook ? { color: "#aaa" } : { color: "#000" }
+          }
           onClick={toggleModalHandler}
         >
           {props.bookItem.bookName}
@@ -40,6 +49,14 @@ const Book = (props: IBooksStore) => {
           {props.bookItem.bookAuthor}
         </span>
         <span className="ToDoItem-cell ToDoItem-cell--actions">
+          <input
+            type="checkbox"
+            checked={props.bookItem.readedBook}
+            onChange={() =>
+              props.booksStore && props.booksStore.readedBook(props.bookItem)
+            }
+          />
+
           <button
             className="ToDoItem-btn"
             onClick={() =>
@@ -50,7 +67,7 @@ const Book = (props: IBooksStore) => {
           </button>
 
           <button className="ToDoItem-btn" onClick={toggleModalUpdateHandler}>
-            Update from MobX
+            Update
           </button>
         </span>
       </div>

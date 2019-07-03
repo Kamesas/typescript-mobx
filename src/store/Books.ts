@@ -38,6 +38,16 @@ export class BooksStore {
     });
   }
 
+  readedBook(finishedBook: iBook) {
+    this.books = this.books.map(item => {
+      if (item.id === finishedBook.id) {
+        item.readedBook = !item.readedBook;
+      }
+      return item;
+    });
+    window.localStorage.setItem("books", JSON.stringify(this.books));
+  }
+
   findBook(searchValue: string) {
     const localStorage =
       window.localStorage.getItem("books") &&
@@ -68,7 +78,8 @@ decorate(BooksStore, {
   addNewBook: action.bound,
   removeBook: action.bound,
   updateBook: action.bound,
-  findBook: action.bound
+  findBook: action.bound,
+  readedBook: action.bound
   //SumCount: computed,
 });
 
