@@ -18,7 +18,7 @@ const Books = (props: IBooksStore) => {
       <div className="heading">
         <HeadingAnimation />
       </div>
-      {/* <h1>Bookshelf</h1> */}
+
       <Header />
 
       <div className="ToDoTable">
