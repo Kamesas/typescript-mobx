@@ -4,6 +4,11 @@ $tableBorderColor: #356235;
   padding: 1em;
 }
 
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
 .ToDoTable {
   margin-top: 20px;
 
@@ -57,14 +62,14 @@ $tableBorderColor: #356235;
       text-align: center;
       padding: 5px 10px;
       border-radius: 5px;
-      box-shadow: 1px 1px 17px 1px rgba(0, 0, 0, .4);
+      box-shadow: 1px 1px 17px 1px rgba(0, 0, 0, 0.4);
       border: none;
       margin: 0 5px;
       cursor: pointer;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
 
       &:hover {
-        box-shadow: 1px 1px 110px 1px rgba(0, 0, 0, .1);
+        box-shadow: 1px 1px 110px 1px rgba(0, 0, 0, 0.1);
       }
     }
   }

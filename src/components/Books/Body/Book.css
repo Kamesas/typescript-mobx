@@ -1,3 +1,7 @@
 .ToDoItem {
-    display: flex;
+  display: flex;
+}
+
+.ToDoItem-cell--task {
+  transition: color 1s ease;
 }

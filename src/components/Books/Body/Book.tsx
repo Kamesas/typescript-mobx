@@ -73,7 +73,7 @@ const Book = (props: IBooksStore) => {
       </div>
 
       {isShowingModal && (
-        <Modal close={toggleModalHandler} width={100} show={isShowingModal}>
+        <Modal close={toggleModalHandler} width={60} show={isShowingModal}>
           <BookFullInfo bookInfo={props.bookItem} />
         </Modal>
       )}
