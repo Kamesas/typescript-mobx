@@ -14,3 +14,7 @@ export const configureStore = () => {
   );
   return store;
 };
+
+// const middlewares = [thunk];
+
+// createStore(rootReducer, initialState, applyMiddleware(...middlewares));

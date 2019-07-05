@@ -1,6 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import { getUsers } from "../store/users/action";
+import { getUsers, consoleLog, fetchFunction } from "../store/users/action";
 
 interface iUsers {
   id: number | string;
@@ -19,13 +19,16 @@ export interface iHeaderProps {
   nameTest?: string;
   users?: iUsers;
   getUsers(): iUsersAction;
+  consoleLog(): any;
+  fetchFunction(): any;
 }
 
 const Header: React.FC<iHeaderProps> = (props: iHeaderProps) => {
   return (
     <div className="header">
       <h2>{props.nameTest}</h2>
-      <button onClick={props.getUsers}>click me</button>
+      <button onClick={props.fetchFunction}>click me</button>
+      <button onClick={props.consoleLog}>console</button>
     </div>
   );
 };
@@ -38,7 +41,9 @@ function mapStateToProps(state: iUsers) {
 
 function mapDispatchToProps(dispatch: any) {
   return {
-    getUsers: () => dispatch(getUsers())
+    getUsers: () => dispatch(getUsers()),
+    consoleLog: () => dispatch(consoleLog()),
+    fetchFunction: () => dispatch(fetchFunction())
   };
 }
 

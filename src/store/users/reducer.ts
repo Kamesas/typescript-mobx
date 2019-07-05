@@ -21,9 +21,13 @@ export function users(
   action: UsersActions
 ): iUsersReducer {
   switch (action.type) {
-    case "GET_USERS":
+    case "GET_USERS_API":
       console.log(state);
       return { users: [...state.users, action.payload] };
+
+    case "CONSOLE_LOG":
+      console.log(state);
+      return state;
 
     default:
       return state;
