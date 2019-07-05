@@ -1,5 +1,5 @@
 import * as React from "react";
-import { UpdateMessageParam } from "./App";
+import { UpdateMessageParam } from "./App_example";
 
 interface ChatInterfaceProps {
   message: string;
