@@ -14,7 +14,7 @@ export interface iUsersAction {
 export const getUsers = (): iUsersAction => {
   return {
     type: "GET_USERS",
-    payload: { id: 6565656, name: "Alex" }
+    payload: { id: new Date().getTime(), name: "Alex" }
   };
 };
 

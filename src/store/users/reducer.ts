@@ -23,7 +23,7 @@ export function users(
   switch (action.type) {
     case "GET_USERS":
       console.log(state);
-      return state;
+      return { users: [...state.users, action.payload] };
 
     default:
       return state;

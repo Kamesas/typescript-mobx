@@ -18,14 +18,14 @@ interface iUsersAction {
 export interface iHeaderProps {
   nameTest?: string;
   users?: iUsers;
-  getUsers(): any;
+  getUsers(): iUsersAction;
 }
 
 const Header: React.FC<iHeaderProps> = (props: iHeaderProps) => {
-  console.log(props.getUsers());
   return (
     <div className="header">
       <h2>{props.nameTest}</h2>
+      <button onClick={props.getUsers}>click me</button>
     </div>
   );
 };
@@ -38,7 +38,7 @@ function mapStateToProps(state: iUsers) {
 
 function mapDispatchToProps(dispatch: any) {
   return {
-    getUsers: () => dispatch(getUsers)
+    getUsers: () => dispatch(getUsers())
   };
 }
 

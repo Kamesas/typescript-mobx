@@ -5,10 +5,14 @@ import { configureStore } from "./store/index";
 
 import App from "./App";
 
-console.log(configureStore().getState());
+const store = configureStore();
+
+store.subscribe(() => {
+  console.log(store.getState());
+});
 
 const Root = () => (
-  <Provider store={configureStore()}>
+  <Provider store={store}>
     <App />
   </Provider>
 );
