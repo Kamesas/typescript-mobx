@@ -1,11 +1,12 @@
 import * as React from "react";
+import Header from "./app/Header";
 
 export interface AppProps {}
 
-const App: React.SFC<AppProps> = () => {
+const App: React.FC<AppProps> = () => {
   return (
     <div className="app">
-      <h1>App</h1>
+      <Header nameTest="Alex" />
     </div>
   );
 };
