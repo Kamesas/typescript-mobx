@@ -2,42 +2,37 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { fetchFunction, deleteUser, addUser } from "../store/users/action";
 
-interface iUsers {
-  id: number | string;
-  name: string;
-  username?: string;
-  email?: string;
-  [key: string]: any;
-}
-
 export interface iHeaderProps {
-  users?: iUsers;
+  users?: object;
   fetchFunction(): any;
-  deleteUser(): any;
+  deleteUser(id: string | number): any;
   addUser(): any;
 }
 
 const Header: React.FC<iHeaderProps> = (props: iHeaderProps) => {
   console.log(props.users);
+  React.useEffect(() => {
+    console.log("use");
+  });
   return (
     <div className="header">
       <button onClick={props.fetchFunction}>fetch</button>
-      <button onClick={props.deleteUser}>delete</button>
+      <button onClick={() => props.deleteUser(12)}>delete</button>
       <button onClick={props.addUser}>addUser</button>
     </div>
   );
 };
 
-function mapStateToProps(state: iUsers) {
+function mapStateToProps(state: object) {
   return {
-    users: state.users
+    users: state
   };
 }
 
 function mapDispatchToProps(dispatch: any) {
   return {
     fetchFunction: () => dispatch(fetchFunction()),
-    deleteUser: () => dispatch(deleteUser()),
+    deleteUser: (id: string | number) => dispatch(deleteUser(id)),
     addUser: () => dispatch(addUser())
   };
 }

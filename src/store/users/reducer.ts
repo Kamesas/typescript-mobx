@@ -1,13 +1,12 @@
-import { iUsers, UsersActions, GET_USERS, DELETE_USER } from "./types";
+import { UsersActions, GET_USERS, DELETE_USER } from "./types";
 
-const initialState: iUsers = {
-  users: []
-};
+const initialState: object = {};
 
-export function users(state = initialState, action: UsersActions): iUsers {
+export function users(state = initialState, action: UsersActions): {} {
   switch (action.type) {
     case GET_USERS:
-      return { users: [...state.users, action.payload] };
+      console.log(state, action.payload);
+      return action.payload;
     case DELETE_USER:
       console.log("delete");
       return state;

@@ -1,6 +1,6 @@
 export interface iUser {
-  id: number | string;
-  name: string;
+  id?: number | string;
+  name?: string;
   username?: string;
   email?: string;
   [key: string]: any;
@@ -15,7 +15,7 @@ export const DELETE_USER = "DELETE_USER";
 
 export interface iUsersAction {
   type: string;
-  payload: iUser;
+  payload: {};
 }
 
 export type UsersActions = iUsersAction;

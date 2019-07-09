@@ -1,5 +1,8 @@
 import { UsersActions, iUser, GET_USERS, DELETE_USER } from "./types";
 
+const BASE_URL = "https://react-redux-firebase-1-77d47.firebaseio.com/";
+const USERS = "users";
+
 export const getUsersAPI = (users: iUser): UsersActions => {
   return {
     type: GET_USERS,
@@ -9,12 +12,13 @@ export const getUsersAPI = (users: iUser): UsersActions => {
 
 export function fetchFunction() {
   return (dispatch: any) => {
-    fetch("https://react-redux-firebase-1-77d47.firebaseio.com/users.json")
+    fetch(`${BASE_URL}/${USERS}.json`)
       .then(res => res.json())
       .then(res => {
         if (res.error) {
           throw res.error;
         }
+        console.log("fetch", res);
         dispatch(getUsersAPI(res));
         return res;
       })
@@ -24,18 +28,16 @@ export function fetchFunction() {
   };
 }
 
-export const deleteUser = () => {
+export const deleteUser = (id: string | number) => {
   return (dispatch: any) => {
-    fetch(
-      "https://react-redux-firebase-1-77d47.firebaseio.com/users/-LUPBtiPSGDzNpH_tW_r.json",
-      {
-        method: "DELETE"
-      }
-    )
+    fetch(`${BASE_URL}/${USERS}/${id}.json`, {
+      method: "DELETE"
+    })
       .then(e => {
         dispatch({
           type: DELETE_USER
         });
+
         return e;
       })
       .catch(e => console.log(e));
@@ -44,7 +46,7 @@ export const deleteUser = () => {
 
 export const addUser = () => {
   return (dispatch: any) => {
-    fetch("https://react-redux-firebase-1-77d47.firebaseio.com/users.json", {
+    fetch(`${BASE_URL}/{USERS}.json`, {
       method: "POST",
       body: JSON.stringify({ name: "Alex", work: "WevDev" })
     })
