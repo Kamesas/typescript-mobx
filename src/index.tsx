@@ -7,10 +7,6 @@ import App from "./App";
 
 const store = configureStore();
 
-store.subscribe(() => {
-  console.log(store.getState());
-});
-
 const Root = () => (
   <Provider store={store}>
     <App />

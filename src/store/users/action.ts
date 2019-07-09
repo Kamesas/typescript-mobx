@@ -1,42 +1,22 @@
-interface iUsers {
-  id: number | string;
-  name: string;
-  username?: string;
-  email?: string;
-  [key: string]: any;
-}
+import { UsersActions, iUser, GET_USERS, DELETE_USER } from "./types";
 
-export interface iUsersAction {
-  type: string;
-  payload: iUsers;
-}
-
-export const getUsers = (): iUsersAction => {
+export const getUsersAPI = (users: iUser): UsersActions => {
   return {
-    type: "GET_USERS",
-    payload: { id: new Date().getTime(), name: "Alex" }
-  };
-};
-
-export const getUsersAPI = (users: iUsers): iUsersAction => {
-  return {
-    type: "GET_USERS_API",
+    type: GET_USERS,
     payload: users
   };
 };
 
-//https://dev.to/markusclaus/fetching-data-from-an-api-using-reactredux-55ao
-
 export function fetchFunction() {
   return (dispatch: any) => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://react-redux-firebase-1-77d47.firebaseio.com/users.json")
       .then(res => res.json())
       .then(res => {
         if (res.error) {
           throw res.error;
         }
-        dispatch(getUsersAPI(res.products));
-        return res.products;
+        dispatch(getUsersAPI(res));
+        return res;
       })
       .catch(error => {
         console.log(error);
@@ -44,10 +24,37 @@ export function fetchFunction() {
   };
 }
 
-export const consoleLog = () => {
-  return {
-    type: "CONSOLE_LOG"
+export const deleteUser = () => {
+  return (dispatch: any) => {
+    fetch(
+      "https://react-redux-firebase-1-77d47.firebaseio.com/users/-LUPBtiPSGDzNpH_tW_r.json",
+      {
+        method: "DELETE"
+      }
+    )
+      .then(e => {
+        dispatch({
+          type: DELETE_USER
+        });
+        return e;
+      })
+      .catch(e => console.log(e));
   };
 };
 
-export type UsersActions = iUsersAction;
+export const addUser = () => {
+  return (dispatch: any) => {
+    fetch("https://react-redux-firebase-1-77d47.firebaseio.com/users.json", {
+      method: "POST",
+      body: JSON.stringify({ name: "Alex", work: "WevDev" })
+    })
+      .then(e => {
+        console.log(e);
+        // dispatch({
+        //   type: DELETE_USER
+        // });
+        return e;
+      })
+      .catch(e => console.log(e));
+  };
+};

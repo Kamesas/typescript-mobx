@@ -1,34 +1,16 @@
-import { UsersActions } from "./action";
+import { iUsers, UsersActions, GET_USERS, DELETE_USER } from "./types";
 
-interface iUsers {
-  id: number | string;
-  name: string;
-  username?: string;
-  email?: string;
-  [key: string]: any;
-}
-
-interface iUsersReducer {
-  users: iUsers[];
-}
-
-const initialState: iUsersReducer = {
+const initialState: iUsers = {
   users: []
 };
 
-export function users(
-  state = initialState,
-  action: UsersActions
-): iUsersReducer {
+export function users(state = initialState, action: UsersActions): iUsers {
   switch (action.type) {
-    case "GET_USERS_API":
-      console.log(state);
+    case GET_USERS:
       return { users: [...state.users, action.payload] };
-
-    case "CONSOLE_LOG":
-      console.log(state);
+    case DELETE_USER:
+      console.log("delete");
       return state;
-
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import { getUsers, consoleLog, fetchFunction } from "../store/users/action";
+import { fetchFunction, deleteUser, addUser } from "../store/users/action";
 
 interface iUsers {
   id: number | string;
@@ -10,25 +10,20 @@ interface iUsers {
   [key: string]: any;
 }
 
-interface iUsersAction {
-  type: string;
-  payload: iUsers;
-}
-
 export interface iHeaderProps {
-  nameTest?: string;
   users?: iUsers;
-  getUsers(): iUsersAction;
-  consoleLog(): any;
   fetchFunction(): any;
+  deleteUser(): any;
+  addUser(): any;
 }
 
 const Header: React.FC<iHeaderProps> = (props: iHeaderProps) => {
+  console.log(props.users);
   return (
     <div className="header">
-      <h2>{props.nameTest}</h2>
-      <button onClick={props.fetchFunction}>click me</button>
-      <button onClick={props.consoleLog}>console</button>
+      <button onClick={props.fetchFunction}>fetch</button>
+      <button onClick={props.deleteUser}>delete</button>
+      <button onClick={props.addUser}>addUser</button>
     </div>
   );
 };
@@ -41,9 +36,9 @@ function mapStateToProps(state: iUsers) {
 
 function mapDispatchToProps(dispatch: any) {
   return {
-    getUsers: () => dispatch(getUsers()),
-    consoleLog: () => dispatch(consoleLog()),
-    fetchFunction: () => dispatch(fetchFunction())
+    fetchFunction: () => dispatch(fetchFunction()),
+    deleteUser: () => dispatch(deleteUser()),
+    addUser: () => dispatch(addUser())
   };
 }
 
