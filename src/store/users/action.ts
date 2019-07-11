@@ -46,7 +46,7 @@ export const deleteUser = (id: string | number) => {
 
 export const addUser = () => {
   return (dispatch: any) => {
-    fetch(`${BASE_URL}/{USERS}.json`, {
+    fetch(`${BASE_URL}/${USERS}.json`, {
       method: "POST",
       body: JSON.stringify({ name: "Alex", work: "WevDev" })
     })

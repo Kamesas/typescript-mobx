@@ -1,3 +1,13 @@
+export interface IStateUser {
+  name: string;
+  work: string;
+  [key: string]: any;
+}
+
+export interface IStateUsers {
+  users: IStateUser;
+}
+
 export interface iUser {
   id?: number | string;
   name?: string;
