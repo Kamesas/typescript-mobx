@@ -4,20 +4,8 @@ export interface IStateUser {
   [key: string]: any;
 }
 
-export interface IStateUsers {
-  users: IStateUser;
-}
-
-export interface iUser {
-  id?: number | string;
-  name?: string;
-  username?: string;
-  email?: string;
-  [key: string]: any;
-}
-
-export interface iUsers {
-  users: iUser[];
+export interface IState {
+  users: IStateUser[];
 }
 
 export const GET_USERS = "GET_USERS";
@@ -25,7 +13,7 @@ export const DELETE_USER = "DELETE_USER";
 
 export interface iUsersAction {
   type: string;
-  payload: {};
+  payload: IState;
 }
 
 export type UsersActions = iUsersAction;

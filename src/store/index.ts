@@ -2,9 +2,11 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import reduxThunk from "redux-thunk";
 import { users } from "./users/reducer";
+import { todosReducer } from "./todos/reducer";
 
 const rootReducer = combineReducers({
-  users
+  users,
+  todos: todosReducer
 });
 
 export const configureStore = () => {
@@ -14,7 +16,3 @@ export const configureStore = () => {
   );
   return store;
 };
-
-// const middlewares = [thunk];
-
-// createStore(rootReducer, initialState, applyMiddleware(...middlewares));

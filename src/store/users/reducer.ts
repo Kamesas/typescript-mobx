@@ -1,14 +1,14 @@
-import { UsersActions, GET_USERS, DELETE_USER } from "./types";
+import { IState, UsersActions, GET_USERS, DELETE_USER } from "./types";
 
-const initialState: object = {};
+const initialState: IState = {
+  users: []
+};
 
-export function users(state = initialState, action: UsersActions): {} {
+export function users(state = initialState, action: UsersActions): IState {
   switch (action.type) {
     case GET_USERS:
-      console.log(state, action.payload);
       return action.payload;
     case DELETE_USER:
-      console.log("delete");
       return state;
     default:
       return state;

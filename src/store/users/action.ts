@@ -1,9 +1,9 @@
-import { UsersActions, iUser, GET_USERS, DELETE_USER } from "./types";
+import { IState, UsersActions, GET_USERS, DELETE_USER } from "./types";
 
 const BASE_URL = "https://react-redux-firebase-1-77d47.firebaseio.com/";
 const USERS = "users";
 
-export const getUsersAPI = (users: iUser): UsersActions => {
+export const getUsersAPI = (users: IState): UsersActions => {
   return {
     type: GET_USERS,
     payload: users
@@ -18,7 +18,7 @@ export function fetchFunction() {
         if (res.error) {
           throw res.error;
         }
-        console.log("fetch", res);
+        //console.log("fetch", res);
         dispatch(getUsersAPI(res));
         return res;
       })
